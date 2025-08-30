@@ -1,0 +1,169 @@
+:root {
+  --gradient: linear-gradient(180deg, #2d707d 0%, #163e92 100%);
+  --dark: #091732;
+  --grey: #b1bacb;
+  --grey-border: rgba(210, 210, 210, 0.75);
+  --grey-light: #eeeeee;
+  --blue: #2d70fd;
+  --green: #00d8a7;
+  --white: #ffffff;
+  --crimson: #dc3545;
+  --black: #151a1a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(../img/for_back.jpeg);
+  background-size: cover;
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 2rem;
+  color: var(--dark);
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 2rem;
+  background-color: var(--black);
+  padding: 2rem;
+  width: 100%;
+  max-width: 520px;
+  box-shadow: 0 1rem 3rem rgba(0, 23, 71, 0.15);
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--white);
+  margin-bottom: 0.5rem;
+}
+
+.input {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-field {
+  flex: 1;
+  border: 1px solid var(--grey-border);
+  border-radius: 0.5rem;
+  padding: 0.8rem;
+  font-size: 1rem;
+}
+
+.btn {
+  color: var(--white);
+  font-size: 1rem;
+  padding: 0.6rem 1rem;
+  border-radius: 0.4rem;
+  background-color: var(--blue);
+  border: none;
+  cursor: pointer;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+ul.scroll {
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  max-height: 15rem;
+  overflow-y: auto;
+  border-radius: 0.5rem;
+}
+
+li.todo-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  background: #fafafa;
+  margin-bottom: 0.5rem;
+}
+
+.left {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+  flex: 1;
+}
+
+.todo-checkbox {
+  width: 1.25rem;
+  height: 1.25rem;
+  cursor: pointer;
+}
+
+.todo-text {
+  flex: 1;
+  word-break: break-word;
+  cursor: text;
+}
+
+.todo-text.completed {
+  text-decoration: line-through;
+  color: var(--green);
+}
+
+.delete-single {
+  background: transparent;
+  border: none;
+  color: var(--crimson);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.delete-single:hover {
+  text-decoration: underline;
+}
+
+.clear-btn {
+  border: none;
+  background: transparent;
+  color: var(--grey);
+  cursor: pointer;
+}
+
+.counter {
+  border: 0.06rem solid var(--grey-light);
+  margin: 0.5rem 0;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--grey);
+  height: 2rem;
+}
+
+.footer {
+  margin-top: 1rem;
+  color: #f1f1f1;
+  text-align: center;
+}
+
+/* small screens */
+@media (max-width: 480px) {
+  .todo {
+    padding: 1rem;
+    width: 95%;
+  }
+  .btn {
+    padding: 0.5rem;
+  }
+}
